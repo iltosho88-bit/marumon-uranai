@@ -92,18 +92,18 @@ footer {
 <!-- ✨ 占いロジック -->
 <script>
 const marumon = {
-  1: { name: "リオン", animal: "🦁" },
-  2: { name: "ミーミ", animal: "🐰"  },
-  3: { name: "ピコ", animal: "🐦" },
-  4: { name: "バル", animal: "🦫" },
-  5: { name: "ネロス", animal: "🦊" },
-  6: { name: "スワリン", animal: "🦢"},
-  7: { name: "タルーシャ", animal: "🐢" },
-  8: { name: "くまドン", animal: "🐻" },
-  9: { name: "ポット", animal: "🕊"},
-  11: { name: "シロー", animal: "🐶" },
-  22: { name: "ダイト", animal: "🐘" },
-  33: { name: "ホーすけ", animal: "🦉"}
+    1: { name: "リオン", animal: "🦁", img: "1.png" },
+  2: { name: "ミーミ", animal: "🐰", img: "2.png" },
+  3: { name: "ピコ", animal: "🐦", img: "3.png" },
+  4: { name: "バル", animal: "🦫", img: "4.png" },
+  5: { name: "ネロス", animal: "🦊", img: "5.png" },
+  6: { name: "スワリン", animal: "🦢", img: "6.png" },
+  7: { name: "タルーシャ", animal: "🐢", img: "7.png" },
+  8: { name: "くまドン", animal: "🐻", img: "8.png" },
+  9: { name: "ポット", animal: "🕊", img: "9.png" },
+  11: { name: "シロー", animal: "🐶", img: "11.png" },
+  22: { name: "ダイト", animal: "🐘", img: "22.png" },
+  33: { name: "ホーすけ", animal: "🦉", img: "33.png" }
 };
 
 // ライフパスナンバーを算出
@@ -149,6 +149,7 @@ function analyze() {
 
   document.getElementById("result").innerHTML = `
     <h2>${result.animal} ${result.name}</h2>
+    <img src="images/${result.img}" alt="${result.name}" width="180">
     <p>属性：<strong>${stem}</strong></p>
   `;
 }
